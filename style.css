@@ -1306,3 +1306,255 @@ a {
 .footer__back-top:hover {
   color: #fff;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE — MEDIA QUERIES
+   Breakpoints:
+     ≤1024px  → Tablet landscape
+     ≤768px   → Tablet portrait / small tablet
+     ≤480px   → Mobile
+   ═══════════════════════════════════════════════════════════ */
+ 
+/* ─────────────────────────────────────────────
+   TABLET LANDSCAPE  (≤ 1024px)
+───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+ 
+  /* Topbar */
+  .topbar {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+  .topbar__inner { padding: 0 32px; }
+  .topbar__links { gap: 24px; }
+ 
+  /* Hero */
+  .hero__content { padding: 0 60px; gap: 40px; }
+  .hero__name    { font-size: 52px; }
+  .hero__photo-wrap { width: 260px; height: 260px; margin-right: 0; }
+ 
+  /* Intro */
+  .intro__bg-cream { width: 200px; }
+  .intro__photos   { width: 320px; height: 420px; margin-left: 20px; }
+  .intro__photo-card img { width: 150px; height: 220px; }
+  .intro__text { padding-left: 40px; padding-right: 60px; }
+  .intro__title { font-size: 54px; }
+ 
+  /* Education */
+  .section-education { padding: 80px 60px; }
+  .education__title  { font-size: 44px; }
+  .timeline__year    { font-size: 30px; width: 110px; }
+  .timeline__item    { width: 110px; }
+ 
+  /* Skills */
+  .card-section { margin: 0 40px; padding: 50px 60px; }
+  .card-section__title { font-size: 40px; }
+ 
+  /* Portfolio */
+  .portfolio__header      { padding: 0 60px; }
+  .portfolio__title       { font-size: 52px; }
+  .portfolio__slider-wrap { padding: 0 60px; }
+ 
+  /* Project Detail */
+  .section-project-detail { padding: 80px 60px; }
+  .detail__img-wrap { width: 420px; height: 320px; }
+  .detail__title { font-size: 40px; }
+ 
+  /* Soft Skill */
+  .section-softskill { padding: 80px 60px 100px; }
+  .softskill__title  { font-size: 44px; }
+  .softskill__grid   { gap: 32px 40px; }
+}
+ 
+/* ─────────────────────────────────────────────
+   TABLET PORTRAIT  (≤ 768px)
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+ 
+  /* Topbar — hamburger-style scroll */
+  .topbar__inner { padding: 0 20px; justify-content: center; }
+  .topbar__links { gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .topbar__link  { font-size: 12px; }
+ 
+  /* Hero — stack vertical */
+  .section-hero  { height: auto; padding: 100px 24px 60px; }
+  .hero__content {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+    gap: 32px;
+    text-align: center;
+  }
+  .hero__text   { align-items: center; max-width: 100%; }
+  .hero__name   { font-size: 44px; }
+  .hero__subtitle { font-size: 18px; }
+  .hero__photo-wrap { width: 220px; height: 220px; margin-right: 0; }
+  .hero__dots   { display: none; }
+ 
+  /* Intro — stack vertical */
+  .intro__inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 24px;
+    gap: 48px;
+  }
+  .intro__bg-cream  { display: none; }
+  .intro__bg-circle { display: none; }
+  .intro__photos {
+    width: 280px;
+    height: 340px;
+    margin-left: 0;
+  }
+  .intro__photo-card img { width: 130px; height: 190px; }
+  .intro__text {
+    padding: 0;
+    text-align: center;
+  }
+  .intro__title { font-size: 42px; }
+ 
+  /* Education */
+  .section-education { padding: 60px 24px; }
+  .education__title  { font-size: 34px; margin-bottom: 48px; }
+ 
+  /* Timeline — vertikal */
+  .timeline__track {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    gap: 60px;
+    align-items: flex-start;
+    padding-left: 40px;
+  }
+  .timeline__line {
+    top: 0; bottom: 0; left: 50px;
+    width: 2px; height: auto; right: auto;
+    background: linear-gradient(to bottom, var(--brown), var(--cream), var(--brown));
+    transform: none;
+  }
+  .timeline__labels {
+    flex-direction: column;
+    padding: 0 0 0 72px;
+    gap: 60px;
+    margin-top: -220px; /* align with nodes */
+  }
+  .timeline__items  {
+    flex-direction: column;
+    padding: 0 0 0 72px;
+    gap: 28px;
+    margin-top: 20px;
+  }
+  .timeline__year { font-size: 22px; width: auto; text-align: left; }
+  .timeline__item { width: auto; text-align: left; }
+ 
+  /* Skills */
+  .card-section { margin: 0 16px; padding: 40px 28px; }
+  .card-section__title { font-size: 32px; }
+  .skills-grid  { gap: 36px; }
+ 
+  /* Portfolio */
+  .portfolio__header      { padding: 0 24px; margin-bottom: 40px; }
+  .portfolio__title       { font-size: 38px; }
+  .portfolio__subtitle    { font-size: 14px; }
+  .portfolio__slider-wrap { padding: 0 24px; }
+  .portfolio__card        { width: 300px; }
+  .portfolio__card-img    { height: 200px; }
+ 
+  /* Slider buttons */
+  .slider__btn { width: 44px; height: 44px; font-size: 17px; }
+  .slider__btn--prev { left: 16px; }
+  .slider__btn--next { right: 16px; }
+ 
+  /* Project Detail — stack vertical */
+  .section-project-detail { padding: 60px 24px; }
+  .detail__content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .detail__img-wrap {
+    width: 100%;
+    height: 240px;
+  }
+  .detail__title { font-size: 32px; }
+ 
+  /* Soft Skill */
+  .section-softskill { padding: 60px 24px 80px; }
+  .softskill__title  { font-size: 36px; }
+  .softskill__grid   { grid-template-columns: 1fr 1fr; gap: 24px; }
+ 
+  /* Contact */
+  .contact__inner { padding: 32px 28px 40px; }
+  .contact__grid  { grid-template-columns: 1fr 1fr; gap: 20px 12px; }
+  .contact__item-icon { width: 58px; height: 58px; }
+  .contact__item-icon img { width: 54px; height: 54px; }
+ 
+  /* Footer */
+  .footer { padding: 20px 24px; }
+  .footer__copy { font-size: 0.72rem; text-align: center; }
+}
+ 
+/* ─────────────────────────────────────────────
+   MOBILE  (≤ 480px)
+───────────────────────────────────────────── */
+@media (max-width: 480px) {
+ 
+  /* Topbar */
+  .topbar { height: auto; min-height: 56px; padding: 8px 0; }
+  .topbar__links { gap: 10px; }
+  .topbar__link  { font-size: 11px; }
+ 
+  /* Hero */
+  .section-hero { padding: 80px 16px 48px; }
+  .hero__name   { font-size: 36px; }
+  .hero__subtitle { font-size: 15px; }
+  .hero__photo-wrap { width: 180px; height: 180px; }
+ 
+  /* Intro */
+  .intro__inner { padding: 48px 16px; gap: 36px; }
+  .intro__title { font-size: 34px; }
+  .intro__photos { width: 230px; height: 290px; }
+  .intro__photo-card img { width: 108px; height: 160px; }
+  .intro__photo-card--front { top: 120px; left: 100px; }
+ 
+  /* Education */
+  .section-education { padding: 48px 16px; }
+  .education__title  { font-size: 28px; margin-bottom: 40px; }
+  .timeline__labels  { margin-top: -195px; }
+ 
+  /* Skills */
+  .card-section { margin: 0 8px; padding: 32px 18px; }
+  .card-section__title { font-size: 26px; }
+  .skills-grid  { gap: 24px; }
+  .skill-item__img-box { width: 70px; height: 70px; }
+ 
+  /* Portfolio */
+  .portfolio__header   { padding: 0 16px; }
+  .portfolio__title    { font-size: 30px; }
+  .portfolio__slider-wrap { padding: 0 16px; }
+  .portfolio__card     { width: 260px; }
+  .portfolio__card-img { height: 170px; }
+ 
+  /* Slider buttons */
+  .slider__btn { width: 38px; height: 38px; font-size: 15px; }
+  .slider__btn--prev { left: 8px; }
+  .slider__btn--next { right: 8px; }
+ 
+  /* Project Detail */
+  .section-project-detail { padding: 48px 16px; }
+  .detail__img-wrap { height: 200px; }
+  .detail__title    { font-size: 26px; }
+ 
+  /* Soft Skill */
+  .section-softskill { padding: 48px 16px 64px; }
+  .softskill__title  { font-size: 28px; }
+  .softskill__grid   { grid-template-columns: 1fr; gap: 20px; }
+  .softskill__item   { padding: 28px 20px; }
+ 
+  /* Contact */
+  .contact__inner { padding: 28px 20px 36px; }
+  .contact__grid  { grid-template-columns: 1fr 1fr; gap: 16px 8px; }
+  .contact__title { font-size: 1.5rem; }
+  .contact__item-icon { width: 52px; height: 52px; }
+  .contact__item-icon img { width: 48px; height: 48px; }
+  .contact__item-value { font-size: 0.7rem; }
+}
