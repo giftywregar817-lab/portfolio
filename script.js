@@ -1,6 +1,6 @@
-/* ═══════════════════════════════════════════════════════════
+/* 
    PORTFOLIO GIFTY WELIAN SIREGAR — script.js
-   ═══════════════════════════════════════════════════════════ */
+   */
 
 /* ─────────────────────────────────────────────
    DATA PROYEK (untuk detail halaman 3)
@@ -78,7 +78,6 @@ function updateTopbar() {
     topbar.classList.remove('scrolled');
   }
 
-  // Active link highlight — skip project-detail dari perhitungan
   let current = '';
   sections.forEach(sec => {
   if (sec.id === 'project-detail') return;
@@ -95,7 +94,6 @@ function updateTopbar() {
   });
 }
 
-// Smooth scroll ketika klik nav link
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
@@ -189,7 +187,6 @@ function updateSliderButtons() {
 btnPrev.addEventListener('click', () => goToSlide(currentSlide - 1));
 btnNext.addEventListener('click', () => goToSlide(currentSlide + 1));
 
-// Update indicator on native scroll (drag)
 slider.addEventListener('scroll', () => {
   const newSlide = Math.round(slider.scrollLeft / CARD_W);
   if (newSlide !== currentSlide) {
@@ -248,7 +245,7 @@ slider.addEventListener('touchend', () => {
 updateSliderButtons();
 
 /* ─────────────────────────────────────────────
-   4. PROJECT DETAIL — "Details →"
+   4. PROJECT DETAIL 
 ───────────────────────────────────────────── */
 const portfolioSection = document.getElementById('portfolio');
 const detailSection = document.getElementById('project-detail');
@@ -290,11 +287,10 @@ function openProject(index) {
 }
 
 function closeProject() {
-  // Sembunyikan detail, tampilkan portfolio
+  
   detailSection.style.display = 'none';
   portfolioSection.style.display = 'block';
 
-  // Dua frame agar browser selesai render sebelum scroll
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       const top = portfolioSection.getBoundingClientRect().top + window.scrollY - 70;
@@ -390,14 +386,5 @@ if (backTop) {
   backTop.addEventListener('click', e => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-/* ─────────────────────────────────────────────
-   10. RE-OBSERVE setelah project detail toggle
-───────────────────────────────────────────── */
-function refreshObserver() {
-  document.querySelectorAll('.fade-up:not(.visible)').forEach(el => {
-    observer.observe(el);
   });
 }
